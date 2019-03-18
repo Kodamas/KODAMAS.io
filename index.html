@@ -1,122 +1,301 @@
-
-
-  
 <!DOCTYPE html>
-<!--[if lt IE 7]>       <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>          <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>          <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]> <!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-      
-      	<title>kodamas</title>
-	<meta name='keywords' content='pat, perry, art, artist, drawing, illustration, painting, prints, blog, photography, photos' />
-	<meta name='description' content='Pat Perry is an artist and illustrator born in the Detroit area and now calls Grand Rapids, Michigan home. The lands of the north, colorful people, music, and the ordinary streets of the Midwest have always moved him.' />
-	<link rel='canonical' href='http://patperry.net' />
-
-    
-        <meta content="Ray Brown, Bitmanic - http://bitmanic.com" name="author">
-
-  <link href="http://patperry.net/assets/css/style.css" media="all" rel="stylesheet" type="text/css" />
-
-  
-
-  <script src="http://patperry.net/assets/js/modernizr.js" type="text/javascript"></script>
-
-</head>
-
-<body class="index" id="home-page">
-
-  <header class="site-header" role="banner">
-
-    <h1 class="site-name"><a href="http://patperry.net/">Pat Perry</a></h1>
-
-    <button class="site-nav-toggle" type="button">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
-    <div class="site-nav-collapse">
-
-      <ul class="nav site-nav" role="navigation">
-        <li class="level-1 has-children first"><a href="http://patperry.net/art">Art</a>
-<ul>
-<li class="level-2 first"><a href="http://patperry.net/art/works">Works</a></li>
-<li class="level-2"><a href="http://patperry.net/art/walls">Walls</a></li>
-<li class="level-2"><a href="http://patperry.net/art/illustration">Illustration</a></li>
-<li class="level-2"><a href="http://patperry.net/art/in-churchill">In Churchill</a></li>
-<li class="level-2"><a href="http://patperry.net/art/alaska">In Alaska</a></li>
-<li class="level-2"><a href="http://patperry.net/art/in-the-eu">In the EU</a></li>
-<li class="level-2 last"><a href="http://patperry.net/art/photos">Photos</a></li>
-</ul>
-</li>
-<li class="level-1"><a href="http://patperry.net/sketchbook">Sketchbook</a></li>
-<li class="level-1"><a href="http://patperry.net/blog">Blog</a></li>
-<li class="level-1"><a href="http://patperry.net/about">Info</a></li>
-<li class="level-1 last"><a href="http://patperry.net/store">Store</a></li>
-
-                      </ul>
-
-      <ul class="nav social-nav">
-        <li>
-          <a class="instagram" href="http://instagram.com/heypatyeah"><span class="icon pp-instagram"></span>
-          <span class="text sr-only">Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a class="facebook" href="https://www.facebook.com/pages/Pat-Perry-Art/150206088372702"><span class="icon pp-facebook"></span>
-          <span class="text sr-only">Facebook</span>
-          </a>
-        </li>
-      </ul>
-
-    </div>
-  </header>
-
-  <article class="site-main" role="main">
-
-    <div class="site-main-header sr-only">
-      <h1>
-                  Home
-                      </h1>
-    </div>
-
-    <div class="site-main-content">
-
-<!fondo home />
-
-  <div class="full-bg" style="background-image: url(https://kodamas.hotglue.me/?start.head.151041883424);"></div>
-
-      </div>
-  </article>
-
-  <footer class="site-footer sr-only" role="contentinfo">
-    <div class="container">
-      <p class="copyright">&copy; 1552542904 Pat Perry. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
-  <script>
-    window.jQuery || document.write('<script src="http://patperry.net/assets/js/jquery.js" type="text/javascript"><\/script>')
-  </script>
-  <script src="http://patperry.net/assets/js/application.js" type="text/javascript"></script>
-
-      <script>
-      var _gaq=[['_setAccount','UA-9942138-1'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-  
-</body>
+<html lang="en">
+    <head>
+        <title>Moving Boxes Menu with jQuery</title>
+		<meta charset=utf-8>
+        <meta name="description" content="Moving Boxes Menu with jQuery" />
+        <meta name="keywords" content="jquery, boxes, menu, rotating, content, background image, full page"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Astloch:regular,bold' rel='stylesheet' type='text/css' />
+		<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    </head>
+    <body>
+		<div id="mb_background" class="mb_background">
+			<img class="mb_bgimage" src="images/default.jpg" alt="Background"/>
+			<div class="mb_overlay"></div>
+			<div class="mb_loading"></div>
+		</div>
+		<div id="mb_pattern" class="mb_pattern"></div>
+		<div class="mb_heading">
+			<h1>Lack of Color</h1>
+		</div>
+		<div id="mb_menu" class="mb_menu">
+			<a href="#" data-speed="1000" data-easing="easeOutBack">About</a>
+			<a href="#" data-speed="1000" data-easing="easeInExpo">Work</a>
+			<a href="#" data-speed="1000" data-easing="easeOutBack">Media</a>
+			<a href="#" data-speed="1000" data-easing="easeInExpo">Contact</a>
+		</div>
+		<div id="mb_content_wrapper" class="mb_content_wrapper">
+			<span class="mb_close"></span>
+			<div class="mb_content">
+				<h2>About</h2>
+				<div class="mb_content_inner">
+					<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+					<p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+					<p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human</p>
+				</div>
+			</div>
+			<div class="mb_content">
+				<h2>Work</h2>
+				<div class="mb_content_inner">
+					<p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+					<ul id="mb_imagelist" class="mb_imagelist">
+						<li><img src="images/small/1.jpg" alt="image1" data-bgimg="images/image1.jpg"/></li>
+						<li><img src="images/small/2.jpg" alt="image2" data-bgimg="images/image2.jpg"/></li>
+						<li><img src="images/small/3.jpg" alt="image3" data-bgimg="images/image3.jpg"/></li>
+						<li><img src="images/small/4.jpg" alt="image4" data-bgimg="images/image4.jpg"/></li>
+						<li><img src="images/small/2.jpg" alt="image2" data-bgimg="images/image2.jpg"/></li>
+						<li><img src="images/small/1.jpg" alt="image1" data-bgimg="images/image1.jpg"/></li>
+						<li><img src="images/small/4.jpg" alt="image4" data-bgimg="images/image4.jpg"/></li>
+						<li><img src="images/small/3.jpg" alt="image3" data-bgimg="images/image3.jpg"/></li>
+					</ul>
+					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+					<p>Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+					<p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+					<p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again.</p>
+				</div>
+			</div>
+			<div class="mb_content">
+				<h2>Media</h2>
+				<div class="mb_content_inner">
+					<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+					<p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+					<p>The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+					<p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human</p>
+				</div>
+			</div>
+			<div class="mb_content">
+				<h2>Contact</h2>
+				<div class="mb_content_inner">
+					<form>
+						<div><label>Name:</label><input type="text" /></div>
+						<div><label>Email:</label><input type="text" /></div>
+						<div><label>Message:</label><textarea></textarea></div>
+						<div><button>Send</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="mb_footer">
+			<a class="mb_left" href="http://tympanus.net/Tutorials/ExpandingImageMenu/"><span>&laquo; Previous Demo:</span> Expanding Image Menu with jQuery</a>
+			<a href="http://tympanus.net/codrops/2011/03/28/moving-boxes-content/"><strong>back to the Codrops tutorial</strong></a>
+			<a href="http://www.flickr.com/people/jinthai/" target="_blank">Photography by jin.thai</a>
+		</div>
+		<!-- The JavaScript -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="js/jquery.transform-0.9.3.min_.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var $menu			= $('#mb_menu'),
+				$menuItems			= $menu.children('a'),
+				$mbWrapper			= $('#mb_content_wrapper'),
+				$mbClose			= $mbWrapper.children('.mb_close'),
+				$mbContentItems		= $mbWrapper.children('.mb_content'),
+				$mbContentInnerItems= $mbContentItems.children('.mb_content_inner');
+				$mbPattern			= $('#mb_pattern'),
+				$works				= $('#mb_imagelist > li'),
+				$mb_bgimage			= $('#mb_background > img'),
+				
+				Menu		 		= (function(){
+					
+					var init		= function() {
+						preloadImages();
+						initPlugins();
+						initPattern();
+						initEventsHandler();
+					},
+					//preloads the images for the work area (data-bgimg attr)
+					preloadImages	= function() {
+						$works.each(function(i) {
+							$('<img/>').attr('src' , $(this).children('img').data('bgimg'));
+						});
+					},
+					//initialise the jScollPane (scroll plugin)
+					initPlugins		= function() {
+						$mbContentInnerItems.jScrollPane({
+							verticalDragMinHeight: 40,
+							verticalDragMaxHeight: 40
+						});
+					},
+					/*
+						draws 16 boxes on a specific area of the page.
+						we randomly calculate the top, left, and rotation angle for each one of them
+					 */
+					initPattern		= function() {
+						for(var i = 0; i < 16 ; ++i) {
+							//random opacity, top, left and angle
+							var o		= 0.1,
+							t		= Math.floor(Math.random()*196) + 5, // between 5 and 200
+							l		= Math.floor(Math.random()*696) + 5, // between 5 and 700
+							a		= Math.floor(Math.random()*101) - 50; // between -50 and 50
+									
+							$el		= $('<div>').css({
+								opacity			: o,
+								top				: t + 'px',
+								left			: l + 'px'
+							});
+								
+							if (!$.browser.msie)
+								$el.transform({'rotate'	: a + 'deg'});
+								
+							$el.appendTo($mbPattern);
+						}
+						$mbPattern.children().draggable(); //just for fun
+					},
+					/*
+						when the User closes a content item, we move the boxes back to the original place,
+						with new random values for top, left and angle though
+					 */
+					disperse 		= function() {
+						$mbPattern.children().each(function(i) {
+							//random opacity, top, left and angle
+							var o			= 0.1,
+							t			= Math.floor(Math.random()*196) + 5, // between 5 and 200
+							l			= Math.floor(Math.random()*696) + 5, // between 5 and 700
+							a			= Math.floor(Math.random()*101) - 50; // between -50 and 50
+							$el			= $(this),
+							param		= {
+								width	: '50px',
+								height	: '50px',
+								opacity	: o,
+								top		: t + 'px',
+								left	: l + 'px'
+							};
+									
+							if (!$.browser.msie)
+								param.rotate	= a + 'deg';
+									
+							$el.animate(param, 1000, 'easeOutExpo');
+						});
+					},
+					initEventsHandler	= function() {
+						/*
+							click a link in the menu
+						 */
+						$menuItems.bind('click', function(e) {
+							var $this	= $(this),
+							pos		= $this.index(),
+							speed	= $this.data('speed'),
+							easing	= $this.data('easing');
+							//if an item is not yet shown
+							if(!$menu.data('open')){
+								//if current animating return
+								if($menu.data('moving')) return false;
+								$menu.data('moving', true);
+								$.when(openItem(pos, speed, easing)).done(function(){
+									$menu.data({
+										open	: true,
+										moving	: false
+									});
+									showContentItem(pos);
+									$mbPattern.children().fadeOut(500);
+								});
+							}
+							else
+								showContentItem(pos);
+							return false;
+						});
+							
+						/*
+							click close makes the boxes animate to the top of the page
+						 */
+						$mbClose.bind('click', function(e) {
+							$menu.data('open', false);
+							/*
+								if we would want to show the default image when we close:
+								changeBGImage('images/default.jpg');
+							 */
+							$mbPattern.children().fadeIn(500, function() {
+								$mbContentItems.hide();
+								$mbWrapper.hide();
+							});
+								
+							disperse();
+							return false;
+						});
+							
+						/*
+							click an image from "Works" content item,
+							displays the image on the background
+						 */
+						$works.bind('click', function(e) {
+							var source	= $(this).children('img').data('bgimg');
+							changeBGImage(source);
+							return false;
+						});
+								
+					},
+					/*
+						changes the background image
+					 */
+					changeBGImage		= function(img) {
+						//if its the current one return
+						if($mb_bgimage.attr('src') === img || $mb_bgimage.siblings('img').length > 0)
+							return false;
+									
+						var $itemImage = $('<img src="'+img+'" alt="Background" class="mb_bgimage" style="display:none;"/>');
+						$itemImage.insertBefore($mb_bgimage);
+							
+						$mb_bgimage.fadeOut(1000, function() {
+							$(this).remove();
+							$mb_bgimage = $itemImage;
+						});
+						$itemImage.fadeIn(1000);
+					},
+					/*
+						This shows a content item when there is already one shown:
+					 */
+					showContentItem		= function(pos) {
+						$mbContentItems.hide();
+						$mbWrapper.show();
+						$mbContentItems.eq(pos).show().children('.mb_content_inner').jScrollPane();
+					},
+					/*
+						moves the boxes from the top to the center of the page,
+						and shows the respective content item
+					 */
+					openItem			= function(pos, speed, easing) {
+						return $.Deferred(
+						function(dfd) {
+							$mbPattern.children().each(function(i) {
+								var $el			= $(this),
+								param		= {
+									width	: '100px',
+									height	: '100px',
+									top		: 154 + 100 * Math.floor(i/4),
+									left	: 200 + 100 * (i%4),
+									opacity	: 1
+								};
+										
+								if (!$.browser.msie)
+									param.rotate	= '0deg';
+										
+								$el.animate(param, speed, easing, dfd.resolve);
+							});
+						}
+					).promise();
+					};
+						
+					return {
+						init : init
+					};
+					
+				})();
+			
+				/*
+					call the init method of Menu
+				 */
+				Menu.init();
+			});
+		</script>
+    </body>
 </html>
-
-
-
-

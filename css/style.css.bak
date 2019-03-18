@@ -26,10 +26,25 @@ img.mb_bgimage{
 	background:transparent url(../images/pattern.png) repeat top left;
 	z-index:2;
 }
-.mb_pattern div{
-	position:absolute;
+.mb_loading{
+	position:fixed;
+	top:10px;
+	right:10px;
+	background:#000 url(../images/loader.gif) no-repeat center center;
 	width:50px;
 	height:50px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px 10px 10px 10px;
+	z-index:999;
+	opacity:0.7;
+	display:none;
+	z-index:3;
+}
+.mb_pattern div{
+	position:absolute;
+	width:20px;
+	height:20px;
 	background:#000;
 	z-index:10;
 }
@@ -43,32 +58,34 @@ img.mb_bgimage{
 	font-family:"Astloch", Arial, sans-serif;
 	z-index:4;
 }
-.mb_menu{
-	position:absolute;
-	top:154px;
-	left:0px;
-	z-index:11;
-}
 .mb_menu a{
+	position:absolute;
 	background-color:#000;
-	margin-bottom:2px;
+	z-index:4;
 	opacity:0.9;
 	display:block;
-	width:98px;
-	height:98px;
+	width:100px;
+	height:100px;
 	color:#fff;
-	line-height:98px;
+	line-height:100px;
 	text-align:center;
 	text-transform:uppercase;
-	outline:none;
-	-webkit-transition: all 0.2s ease-in;
-	-moz-transition:all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	-transition: all 0.5s ease-in;
 }
 .mb_menu a:hover{
 	color:#000;
 	background-color:#fff;
+}
+.mb_moving a{
+	color:#000;
+	cursor:default;
+}
+.mb_moving a:hover{
+	background-color:#000;
+	color:#000;
 }
 .mb_content_wrapper{
 	background:transparent url(../images/bg_menu.png) repeat top left;
@@ -79,19 +96,6 @@ img.mb_bgimage{
 	left:200px;
 	z-index:4;
 	display:none;
-}
-span.mb_close{
-	position:absolute;
-	top:10px;
-	right:10px;
-	width:11px;
-	height:12px;
-	cursor:pointer;
-	background:transparent url(../images/close.png) no-repeat top left;
-	opacity:0.8;
-}
-span.mb_close:hover{
-	opacity:1.0;
 }
 .mb_content{
 	padding:30px;
@@ -108,7 +112,6 @@ span.mb_close:hover{
 .mb_content_inner{
 	line-height:24px;
 	height:268px;
-	outline: none;
 }
 .mb_content_inner p{
 	padding:5px 0px;
@@ -116,7 +119,6 @@ span.mb_close:hover{
 ul.mb_imagelist li{
 	float:left;
 	margin:2px;
-	cursor:pointer;
 }
 ul.mb_imagelist li img{
 	display:block;
@@ -162,6 +164,19 @@ button{
 }
 button:hover{
 	background:#fff;
+}
+span.mb_close{
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:11px;
+	height:12px;
+	cursor:pointer;
+	background:transparent url(../images/close.png) no-repeat top left;
+	opacity:0.8;
+}
+span.mb_close:hover{
+	opacity:1.0;
 }
 .mb_footer{
 	position:fixed;
